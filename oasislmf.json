@@ -1,0 +1,11 @@
+{
+    "source_exposure_file_path": "tests/data/SourceLocOEDNewPiWind10.csv",
+    "source_accounts_file_path": "tests/data/SourceAccOEDPiWind.csv",
+    "model_data_path": "model_data/Deterministic-Model-Test",
+    "analysis_settings_file_path": "analysis_settings.json",
+    "lookup_config_file_path": "keys_data/Deterministic-Model-Test/lookup.json",
+    "keys_data_path": "keys_data/Deterministic-Model-Test",
+    "ri_info_file_path": "tests/data/SourceReinsInfoOEDPiWind.csv",
+    "ri_scope_file_path": "tests/data/SourceReinsScopeOEDPiWind.csv",
+    "lookup_package_path": "src/keys_server"
+}
