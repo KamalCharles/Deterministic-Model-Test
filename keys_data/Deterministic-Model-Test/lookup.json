@@ -69,7 +69,7 @@
         }
     },
     "vulnerability": {
-        "file_path": "%%KEYS_DATA_PATH%%/vulnerability_dictOED3.csv",
+        "file_path": "%%KEYS_DATA_PATH%%/Vulnoed100.csv",
         "file_type": "csv",
         "float_precision_high": true,
         "num_vulnerabilities": 684,

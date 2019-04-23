@@ -56,7 +56,7 @@ class DeterministicModelTest(olf):
                     "peril_id": 'WSS',
                     "coverage_type": 1,
                     "area_peril_id": int(area_peril_id),
-                    "vulnerability_id": int(vulnerability_id),
+                    "LocUserDef1": int(vulnerability_id),
                     "message": message,
                     "status": status
                 }
@@ -68,7 +68,7 @@ class DeterministicModelTest(olf):
                     "peril_id": 'WSS',
                     "coverage_type": 3,
                     "area_peril_id": area_peril_id,
-                    "vulnerability_id": vulnerability_id,
+                    "LocUserDef1": vulnerability_id,
                     "message": message,
                     "status": status
                 }
