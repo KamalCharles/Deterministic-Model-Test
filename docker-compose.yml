@@ -11,7 +11,7 @@ services:
 
 
 
- testportfolio100_worker:
+ Deterministic-Model-Test_worker:
   restart: always
   image: coreoasis/model_execution_worker:latest
   container_name: Deterministic-Model-Test_worker 
@@ -29,8 +29,6 @@ services:
   environment:
    - MODEL_SUPPLIER_ID=Deterministic-Model-Test
    - MODEL_VERSION_ID=Deterministic-Model-Test
-   - LOCK_FILE = '/tmp/tmp_ktools_lock_file'
-   - DO_CLEAR_WORKING = True
    # Sets the number of cores used by the model execution
    # Set to -1 to use all available cores
    - OASIS_API_KTOOLS_BATCH_COUNT=-1
