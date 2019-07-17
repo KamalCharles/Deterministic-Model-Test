@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2015r4 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap1" blackbox="0" uid="1" editable="1">
+		<properties SelectedLanguage="xslt"/>
+		<structure>
+			<children>
+				<component name="OED_SourceLoc" library="xml" uid="2" kind="14">
+					<properties/>
+					<view ltx="274" lty="260" rbx="760" rby="1047"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="root" outkey="1" expanded="1">
+										<entry name="rec" expanded="1"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\ValidationFiles\OED_SourceLoc.xsd" outputinstance="..\ValidationFiles\OED_SourceLoc.xml" instanceroot="{}root"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="OED_CanLocA" library="xml" uid="3" kind="14">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="1924" lty="231" rbx="2426" rby="987"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="root" inpkey="2" expanded="1">
+										<entry name="rec" expanded="1"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\ValidationFiles\OED_CanLocA.xsd" outputinstance="..\ValidationFiles\OED_CanLocA.xml" instanceroot="{}root"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="3">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+				</edges>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="2" edgekey="3"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>
