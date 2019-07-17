@@ -5,7 +5,5 @@
     "model_version_file_path": "keys_data/Deterministic/ModelVersion.csv",
     "analysis_settings_file_path": "analysis_settings.json",
     "keys_data_path": "keys_data/Deterministic",
-    "ri_info_file_path": "tests/data/SourceFiles/SourceReinsInfoDeterministic.csv",
-    "ri_scope_file_path": "tests/data/SourceFiles/SourceReinsScopeDeterministic.csv",
     "lookup_package_path": "src/keys_server"
 }
