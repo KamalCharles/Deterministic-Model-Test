@@ -2,19 +2,18 @@ version: "2"
 services:
 
 
-
- oasislmf_piwind_keys_server:
-  container_name: piwind_keys_server
-  image: coreoasis/piwind_keys_server:latest
+ oasislmf_deterministic_keys_server:
+  restart: always
+  container_name: deterministic_keys_server
+  image: coreoasis/deterministic_keys_server:latest
   ports:
    - 9001:80
 
 
-
- Deterministic-Model-Test_worker:
+ oasislmf_deterministic_worker:
   restart: always
   image: coreoasis/model_execution_worker:latest
-  container_name: Deterministic-Model-Test_worker 
+  container_name: deterministic_worker 
   volumes:
    - /home/ubuntu/efs/Test-Porfolio/model_data:/var/oasis/model_data/Deterministic-Model-Test
    - /home/ubuntu/upload:/var/www/oasis/upload:rw
@@ -27,9 +26,7 @@ services:
   # Required to allow GDB
   privileged: true
   environment:
-   - MODEL_SUPPLIER_ID=Deterministic-Model-Test
-   - MODEL_VERSION_ID=Deterministic-Model-Test
-   # Sets the number of cores used by the model execution
-   # Set to -1 to use all available cores
+   - MODEL_SUPPLIER_ID=OasisLMF
+   - MODEL_VERSION_ID=Deterministic
    - OASIS_API_KTOOLS_BATCH_COUNT=-1
 
