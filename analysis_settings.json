@@ -39,7 +39,7 @@
                 }
             }
         ], 
-	"ri_output": true,
+	"ri_output": false,
         "ri_summaries": [
             {
                 "aalcalc": true,

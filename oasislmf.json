@@ -1,10 +1,10 @@
 {
     "source_exposure_file_path": "tests/data/SourceFiles/SourceLocDeterministic.csv",
     "source_accounts_file_path": "tests/data/SourceFiles/SourceAccDeterministic.csv",
-    "model_data_path": "model_data/Deterministic-Model-Test",
+    "model_data_path": "model_data/Deterministic",
+    "model_version_file_path": "keys_data/Deterministic/ModelVersion.csv",
     "analysis_settings_file_path": "analysis_settings.json",
-    "lookup_config_file_path": "keys_data/Deterministic-Model-Test/lookup.json",
-    "keys_data_path": "keys_data/Deterministic-Model-Test",
+    "keys_data_path": "keys_data/Deterministic",
     "ri_info_file_path": "tests/data/SourceFiles/SourceReinsInfoDeterministic.csv",
     "ri_scope_file_path": "tests/data/SourceFiles/SourceReinsScopeDeterministic.csv",
     "lookup_package_path": "src/keys_server"
