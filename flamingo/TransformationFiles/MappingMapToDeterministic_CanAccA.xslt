@@ -10,16 +10,16 @@ http://www.altova.com/mapforce
 -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:agt="http://www.altova.com/Mapforce/agt" xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="agt xs">
 	<xsl:output method="xml" encoding="UTF-8" indent="yes"/>
-	<xsl:template name="agt:MapToOED_CanLocA_var2_function">
+	<xsl:template name="agt:MapToDeterministic_CanAccA_var2_function">
 		<xsl:param name="var1_current"/>
 		<xsl:copy-of select="$var1_current/@node()"/>
 		<xsl:copy-of select="$var1_current/node()"/>
 	</xsl:template>
 	<xsl:template match="/">
 		<root>
-			<xsl:attribute name="xsi:noNamespaceSchemaLocation" namespace="http://www.w3.org/2001/XMLSchema-instance">C:/Users/Administrator/Desktop/git/Deterministic-Model-Test/flamingo/ValidationFiles/OED_CanLocA.xsd</xsl:attribute>
+			<xsl:attribute name="xsi:noNamespaceSchemaLocation" namespace="http://www.w3.org/2001/XMLSchema-instance">C:/Users/Administrator/Desktop/git/Deterministic-Model-Test/flamingo/ValidationFiles/Deterministic_CanAccA.xsd</xsl:attribute>
 			<xsl:for-each select="root">
-				<xsl:call-template name="agt:MapToOED_CanLocA_var2_function">
+				<xsl:call-template name="agt:MapToDeterministic_CanAccA_var2_function">
 					<xsl:with-param name="var1_current" select="."/>
 				</xsl:call-template>
 			</xsl:for-each>

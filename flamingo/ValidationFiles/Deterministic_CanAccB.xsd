@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="root">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="rec" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:attribute name="ROW_ID" type="xs:string"/>
+						<xs:attribute name="PortNumber" type="xs:string"/>
+						<xs:attribute name="AccNumber" type="xs:string"/>
+						<xs:attribute name="AccCurrency" type="xs:string"/>
+						<xs:attribute name="PolNumber" type="xs:string"/>
+						<xs:attribute name="PolPerilsCovered" type="xs:string"/>
+						<xs:attribute name="LayerNumber" type="xs:string"/>
+						<xs:attribute name="LayerParticipation" type="xs:string"/>
+						<xs:attribute name="LayerLimit" type="xs:string"/>
+						<xs:attribute name="LayerAttachment" type="xs:string"/>
+						<xs:attribute name="PolDed6All" type="xs:string"/>
+						<xs:attribute name="PolMinDed6All" type="xs:string"/>
+						<xs:attribute name="PolMaxDed6All" type="xs:string"/>
+						<xs:attribute name="CondNumber" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

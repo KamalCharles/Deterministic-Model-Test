@@ -31,18 +31,17 @@ class DeterministicModelTest(olf):
         """
         Process location rows - passed in as a pandas dataframe.
         """
-        for col in ['locnumber', 'occupancycode']:
+        for col in ['locnumber', 'LocUserDef1']:
             loc_df[col] = loc_df[col].astype(int)
 
         for index, row in loc_df.iterrows():
             # determine areaperil id
             lat = row['latitude']
             lon = row['longitude']
-            occupancycode = row['occupancycode']
-            area_peril_id, ap_message = self.get_areaperilid(lat,lon)
+            locuserdef1 = row['locuserdef1']
+            area_peril_id = 1 
+            ap_message = ''
             
-            occupancycode = row['occupancycode']
-
             if area_peril_id and vuln_cat:
                 message = ''
                 status = OASIS_KEYS_STATUS['success']['id'] #KEYS_STATUS_SUCCESS

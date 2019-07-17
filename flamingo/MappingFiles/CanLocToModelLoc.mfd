@@ -6,36 +6,8 @@
 		<properties SelectedLanguage="xslt"/>
 		<structure>
 			<children>
-				<component name="OED_ModelLoc" library="xml" uid="3" kind="14">
-					<properties XSLTDefaultOutput="1"/>
-					<view ltx="1295" lty="502" rbx="1717" rby="866"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="FileInstance" ns="1" expanded="1">
-								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-									<entry name="root" inpkey="1" expanded="1">
-										<entry name="rec" inpkey="2" expanded="1">
-											<entry name="LocNumber" type="attribute" inpkey="3"/>
-											<entry name="Latitude" type="attribute" inpkey="4"/>
-											<entry name="Longitude" type="attribute" inpkey="5"/>
-											<entry name="LocUserDef1" type="attribute" inpkey="6"/>
-										</entry>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\ValidationFiles\OED_ModelLoc.xsd" outputinstance="..\ValidationFiles\OED_ModelLoc.xml" instanceroot="{}root"/>
-						<wsdl/>
-					</data>
-				</component>
-				<component name="OED_CanLocB" library="xml" uid="2" kind="14">
-					<properties/>
+				<component name="Deterministic_CanLocB" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="688" lty="502" rbx="976" rby="998"/>
 					<data>
 						<root scrollposition="1">
@@ -58,7 +30,35 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\ValidationFiles\OED_CanLocB.xsd" outputinstance="..\ValidationFiles\OED_CanLocB.xml" instanceroot="{}root"/>
+						<document schema="..\ValidationFiles\Deterministic_CanLocB.xsd" outputinstance="..\ValidationFiles\OED_CanLocB.xml" instanceroot="{}root"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="Deterministic_ModelLoc" library="xml" uid="3" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="1295" lty="502" rbx="1717" rby="866"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="root" inpkey="1" expanded="1">
+										<entry name="rec" inpkey="2" expanded="1">
+											<entry name="LocNumber" type="attribute" inpkey="3"/>
+											<entry name="Latitude" type="attribute" inpkey="4"/>
+											<entry name="Longitude" type="attribute" inpkey="5"/>
+											<entry name="LocUserDef1" type="attribute" inpkey="6"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\ValidationFiles\Deterministic_ModelLoc.xsd" outputinstance="..\ValidationFiles\OED_ModelLoc.xml" instanceroot="{}root"/>
 						<wsdl/>
 					</data>
 				</component>

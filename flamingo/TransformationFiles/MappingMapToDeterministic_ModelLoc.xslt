@@ -10,7 +10,7 @@ http://www.altova.com/mapforce
 -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:agt="http://www.altova.com/Mapforce/agt" xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="agt xs">
 	<xsl:output method="xml" encoding="UTF-8" indent="yes"/>
-	<xsl:template name="agt:MapToOED_ModelLoc_var6_create_rec">
+	<xsl:template name="agt:MapToDeterministic_ModelLoc_var6_create_rec">
 		<xsl:param name="var5_current"/>
 		<rec>
 			<xsl:variable name="var1_ROWID">
@@ -55,19 +55,19 @@ http://www.altova.com/mapforce
 			</xsl:if>
 		</rec>
 	</xsl:template>
-	<xsl:template name="agt:MapToOED_ModelLoc_var8_resultof_map">
+	<xsl:template name="agt:MapToDeterministic_ModelLoc_var8_resultof_map">
 		<xsl:param name="var7_current"/>
 		<xsl:for-each select="$var7_current/rec">
-			<xsl:call-template name="agt:MapToOED_ModelLoc_var6_create_rec">
+			<xsl:call-template name="agt:MapToDeterministic_ModelLoc_var6_create_rec">
 				<xsl:with-param name="var5_current" select="."/>
 			</xsl:call-template>
 		</xsl:for-each>
 	</xsl:template>
 	<xsl:template match="/">
 		<root>
-			<xsl:attribute name="xsi:noNamespaceSchemaLocation" namespace="http://www.w3.org/2001/XMLSchema-instance">C:/Users/Administrator/Desktop/git/Deterministic-Model-Test/flamingo/ValidationFiles/OED_ModelLoc.xsd</xsl:attribute>
+			<xsl:attribute name="xsi:noNamespaceSchemaLocation" namespace="http://www.w3.org/2001/XMLSchema-instance">C:/Users/Administrator/Desktop/git/Deterministic-Model-Test/flamingo/ValidationFiles/Deterministic_ModelLoc.xsd</xsl:attribute>
 			<xsl:for-each select="root">
-				<xsl:call-template name="agt:MapToOED_ModelLoc_var8_resultof_map">
+				<xsl:call-template name="agt:MapToDeterministic_ModelLoc_var8_resultof_map">
 					<xsl:with-param name="var7_current" select="."/>
 				</xsl:call-template>
 			</xsl:for-each>
