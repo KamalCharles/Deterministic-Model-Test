@@ -15,7 +15,6 @@
 						<xs:attribute name="LayerParticipation" type="xs:string"/>
 						<xs:attribute name="LayerLimit" type="xs:string"/>
 						<xs:attribute name="LayerAttachment" type="xs:string"/>
-						<xs:attribute name="PolDedType6All" type="xs:string"/>
 						<xs:attribute name="PolDed6All" type="xs:string"/>
 						<xs:attribute name="PolMinDed6All" type="xs:string"/>
 						<xs:attribute name="PolMaxDed6All" type="xs:string"/>

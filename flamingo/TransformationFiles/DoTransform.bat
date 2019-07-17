@@ -1,4 +1,4 @@
 @echo off
 
-RaptorXML xslt --xslt-version=1 --input="OED_SourceAcc.xml" --output="../ValidationFiles/OED_CanAccA.xml" --xml-validation-error-as-warning=true %* "MappingMapToOED_CanAccA.xslt"
+RaptorXML xslt --xslt-version=1 --input="Deterministic_CanLocB.xml" --output="../ValidationFiles/OED_ModelLoc.xml" --xml-validation-error-as-warning=true %* "MappingMapToDeterministic_ModelLoc.xslt"
 IF ERRORLEVEL 1 EXIT/B %ERRORLEVEL%
