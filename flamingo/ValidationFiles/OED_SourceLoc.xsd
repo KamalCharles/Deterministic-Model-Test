@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="root">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="rec" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:attribute name="PortNumber" type="xs:string"/>
+						<xs:attribute name="AccNumber" type="xs:string"/>
+						<xs:attribute name="LocNumber" type="xs:string"/>
+						<xs:attribute name="CountryCoder" type="xs:string"/>
+						<xs:attribute name="Latitude" type="xs:string"/>
+						<xs:attribute name="Longitude" type="xs:string"/>
+						<xs:attribute name="OccupancyCode" type="xs:string"/>
+						<xs:attribute name="ConstructionCode" type="xs:string"/>
+						<xs:attribute name="LocUserDef1" type="xs:string"/>
+						<xs:attribute name="LocPerilsCovered" type="xs:string"/>
+						<xs:attribute name="BuildingTIV" type="xs:string"/>
+						<xs:attribute name="OtherTIV" type="xs:string"/>
+						<xs:attribute name="ContentsTIV" type="xs:string"/>
+						<xs:attribute name="BITIV" type="xs:string"/>
+						<xs:attribute name="LocCurrency" type="xs:string"/>
+						<xs:attribute name="LocDedCode1Building" type="xs:string"/>
+						<xs:attribute name="LocDedType1Building" type="xs:string"/>
+						<xs:attribute name="LocDed1Building" type="xs:string"/>
+						<xs:attribute name="LocMinDed1Building" type="xs:string"/>
+						<xs:attribute name="LocMaxDed1Building" type="xs:string"/>
+						<xs:attribute name="LocDedCode2Other" type="xs:string"/>
+						<xs:attribute name="LocDedType2Other" type="xs:string"/>
+						<xs:attribute name="LocDed2Other" type="xs:string"/>
+						<xs:attribute name="LocMinDed2Other" type="xs:string"/>
+						<xs:attribute name="LocMaxDed2Other" type="xs:string"/>
+						<xs:attribute name="LocDedCode3Contents" type="xs:string"/>
+						<xs:attribute name="LocDedType3Contents" type="xs:string"/>
+						<xs:attribute name="LocDed3Contents" type="xs:string"/>
+						<xs:attribute name="LocMinDed3Contents" type="xs:string"/>
+						<xs:attribute name="LocMaxDed3Contents" type="xs:string"/>
+						<xs:attribute name="LocDedCode4BI" type="xs:string"/>
+						<xs:attribute name="LocDedType4BI" type="xs:string"/>
+						<xs:attribute name="LocDed4BI" type="xs:string"/>
+						<xs:attribute name="LocMinDed4BI" type="xs:string"/>
+						<xs:attribute name="LocMaxDed4BI" type="xs:string"/>
+						<xs:attribute name="LocDedCode5PD" type="xs:string"/>
+						<xs:attribute name="LocDedType5PD" type="xs:string"/>
+						<xs:attribute name="LocDed5PD" type="xs:string"/>
+						<xs:attribute name="LocMinDed5PD" type="xs:string"/>
+						<xs:attribute name="LocMaxDed5PD" type="xs:string"/>
+						<xs:attribute name="LocDedCode6All" type="xs:string"/>
+						<xs:attribute name="LocDedType6All" type="xs:string"/>
+						<xs:attribute name="LocDed6All" type="xs:string"/>
+						<xs:attribute name="LocMinDed6All" type="xs:string"/>
+						<xs:attribute name="LocMaxDed6All" type="xs:string"/>
+						<xs:attribute name="LocLimitCode1Building" type="xs:string"/>
+						<xs:attribute name="LocLimitType1Building" type="xs:string"/>
+						<xs:attribute name="LocLimit1Building" type="xs:string"/>
+						<xs:attribute name="LocLimitCode2Other" type="xs:string"/>
+						<xs:attribute name="LocLimitType2Other" type="xs:string"/>
+						<xs:attribute name="LocLimit2Other" type="xs:string"/>
+						<xs:attribute name="LocLimitCode3Contents" type="xs:string"/>
+						<xs:attribute name="LocLimitType3Contents" type="xs:string"/>
+						<xs:attribute name="LocLimit3Contents" type="xs:string"/>
+						<xs:attribute name="LocLimitCode4BI" type="xs:string"/>
+						<xs:attribute name="LocLimitType4BI" type="xs:string"/>
+						<xs:attribute name="LocLimit4BI" type="xs:string"/>
+						<xs:attribute name="LocLimitCode5PD" type="xs:string"/>
+						<xs:attribute name="LocLimitType5PD" type="xs:string"/>
+						<xs:attribute name="LocLimit5PD" type="xs:string"/>
+						<xs:attribute name="LocLimitCode6All" type="xs:string"/>
+						<xs:attribute name="LocLimitType6All" type="xs:string"/>
+						<xs:attribute name="LocLimit6All" type="xs:string"/>
+						<xs:attribute name="CondNumber" type="xs:string"/>
+						<xs:attribute name="CondPriority" type="xs:string"/>
+						<xs:attribute name="CondMinDed6All" type="xs:string"/>
+						<xs:attribute name="CondLimit6All" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
