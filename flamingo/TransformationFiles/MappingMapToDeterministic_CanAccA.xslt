@@ -18,131 +18,196 @@ http://www.altova.com/mapforce
 					<xsl:value-of select="'1'"/>
 				</xsl:if>
 			</xsl:variable>
-			<xsl:if test="string(boolean(string($var1_PortNumber))) != 'false'">
-				<xsl:attribute name="PortNumber">
-					<xsl:value-of select="string($var14_current/@PortNumber)"/>
-				</xsl:attribute>
-			</xsl:if>
+			<xsl:attribute name="PortNumber">
+				<xsl:choose>
+					<xsl:when test="string(boolean(string($var1_PortNumber))) != 'false'">
+						<xsl:value-of select="string($var14_current/@PortNumber)"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="'0'"/>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:attribute>
 			<xsl:variable name="var2_AccNumber">
 				<xsl:if test="$var14_current/@AccNumber">
 					<xsl:value-of select="'1'"/>
 				</xsl:if>
 			</xsl:variable>
-			<xsl:if test="string(boolean(string($var2_AccNumber))) != 'false'">
-				<xsl:attribute name="AccNumber">
-					<xsl:value-of select="string($var14_current/@AccNumber)"/>
-				</xsl:attribute>
-			</xsl:if>
+			<xsl:attribute name="AccNumber">
+				<xsl:choose>
+					<xsl:when test="string(boolean(string($var2_AccNumber))) != 'false'">
+						<xsl:value-of select="string($var14_current/@AccNumber)"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="'0'"/>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:attribute>
 			<xsl:variable name="var3_AccCurrency">
 				<xsl:if test="$var14_current/@AccCurrency">
 					<xsl:value-of select="'1'"/>
 				</xsl:if>
 			</xsl:variable>
-			<xsl:if test="string(boolean(string($var3_AccCurrency))) != 'false'">
-				<xsl:attribute name="AccCurrency">
-					<xsl:value-of select="string($var14_current/@AccCurrency)"/>
-				</xsl:attribute>
-			</xsl:if>
+			<xsl:attribute name="AccCurrency">
+				<xsl:choose>
+					<xsl:when test="string(boolean(string($var3_AccCurrency))) != 'false'">
+						<xsl:value-of select="string($var14_current/@AccCurrency)"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="'0'"/>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:attribute>
 			<xsl:variable name="var4_PolNumber">
 				<xsl:if test="$var14_current/@PolNumber">
 					<xsl:value-of select="'1'"/>
 				</xsl:if>
 			</xsl:variable>
-			<xsl:if test="string(boolean(string($var4_PolNumber))) != 'false'">
-				<xsl:attribute name="PolNumber">
-					<xsl:value-of select="string($var14_current/@PolNumber)"/>
-				</xsl:attribute>
-			</xsl:if>
+			<xsl:attribute name="PolNumber">
+				<xsl:choose>
+					<xsl:when test="string(boolean(string($var4_PolNumber))) != 'false'">
+						<xsl:value-of select="string($var14_current/@PolNumber)"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="'0'"/>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:attribute>
 			<xsl:variable name="var5_PolPerilsCovered">
 				<xsl:if test="$var14_current/@PolPerilsCovered">
 					<xsl:value-of select="'1'"/>
 				</xsl:if>
 			</xsl:variable>
-			<xsl:if test="string(boolean(string($var5_PolPerilsCovered))) != 'false'">
-				<xsl:attribute name="PolPerilsCovered">
-					<xsl:value-of select="string($var14_current/@PolPerilsCovered)"/>
-				</xsl:attribute>
-			</xsl:if>
+			<xsl:attribute name="PolPerilsCovered">
+				<xsl:choose>
+					<xsl:when test="string(boolean(string($var5_PolPerilsCovered))) != 'false'">
+						<xsl:value-of select="string($var14_current/@PolPerilsCovered)"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="'0'"/>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:attribute>
 			<xsl:variable name="var6_LayerNumber">
 				<xsl:if test="$var14_current/@LayerNumber">
 					<xsl:value-of select="'1'"/>
 				</xsl:if>
 			</xsl:variable>
-			<xsl:if test="string(boolean(string($var6_LayerNumber))) != 'false'">
-				<xsl:attribute name="LayerNumber">
-					<xsl:value-of select="string($var14_current/@LayerNumber)"/>
-				</xsl:attribute>
-			</xsl:if>
+			<xsl:attribute name="LayerNumber">
+				<xsl:choose>
+					<xsl:when test="string(boolean(string($var6_LayerNumber))) != 'false'">
+						<xsl:value-of select="string($var14_current/@LayerNumber)"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="'0'"/>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:attribute>
 			<xsl:variable name="var7_LayerParticipation">
 				<xsl:if test="$var14_current/@LayerParticipation">
 					<xsl:value-of select="'1'"/>
 				</xsl:if>
 			</xsl:variable>
-			<xsl:if test="string(boolean(string($var7_LayerParticipation))) != 'false'">
-				<xsl:attribute name="LayerParticipation">
-					<xsl:value-of select="string($var14_current/@LayerParticipation)"/>
-				</xsl:attribute>
-			</xsl:if>
+			<xsl:attribute name="LayerParticipation">
+				<xsl:choose>
+					<xsl:when test="string(boolean(string($var7_LayerParticipation))) != 'false'">
+						<xsl:value-of select="string($var14_current/@LayerParticipation)"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="'0'"/>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:attribute>
 			<xsl:variable name="var8_LayerLimit">
 				<xsl:if test="$var14_current/@LayerLimit">
 					<xsl:value-of select="'1'"/>
 				</xsl:if>
 			</xsl:variable>
-			<xsl:if test="string(boolean(string($var8_LayerLimit))) != 'false'">
-				<xsl:attribute name="LayerLimit">
-					<xsl:value-of select="string($var14_current/@LayerLimit)"/>
-				</xsl:attribute>
-			</xsl:if>
+			<xsl:attribute name="LayerLimit">
+				<xsl:choose>
+					<xsl:when test="string(boolean(string($var8_LayerLimit))) != 'false'">
+						<xsl:value-of select="string($var14_current/@LayerLimit)"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="'0'"/>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:attribute>
 			<xsl:variable name="var9_LayerAttachment">
 				<xsl:if test="$var14_current/@LayerAttachment">
 					<xsl:value-of select="'1'"/>
 				</xsl:if>
 			</xsl:variable>
-			<xsl:if test="string(boolean(string($var9_LayerAttachment))) != 'false'">
-				<xsl:attribute name="LayerAttachment">
-					<xsl:value-of select="string($var14_current/@LayerAttachment)"/>
-				</xsl:attribute>
-			</xsl:if>
+			<xsl:attribute name="LayerAttachment">
+				<xsl:choose>
+					<xsl:when test="string(boolean(string($var9_LayerAttachment))) != 'false'">
+						<xsl:value-of select="string($var14_current/@LayerAttachment)"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="'0'"/>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:attribute>
 			<xsl:variable name="var10_PolDedAll">
 				<xsl:if test="$var14_current/@PolDed6All">
 					<xsl:value-of select="'1'"/>
 				</xsl:if>
 			</xsl:variable>
-			<xsl:if test="string(boolean(string($var10_PolDedAll))) != 'false'">
-				<xsl:attribute name="PolDed6All">
-					<xsl:value-of select="string($var14_current/@PolDed6All)"/>
-				</xsl:attribute>
-			</xsl:if>
+			<xsl:attribute name="PolDed6All">
+				<xsl:choose>
+					<xsl:when test="string(boolean(string($var10_PolDedAll))) != 'false'">
+						<xsl:value-of select="string($var14_current/@PolDed6All)"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="'0'"/>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:attribute>
 			<xsl:variable name="var11_PolMinDedAll">
 				<xsl:if test="$var14_current/@PolMinDed6All">
 					<xsl:value-of select="'1'"/>
 				</xsl:if>
 			</xsl:variable>
-			<xsl:if test="string(boolean(string($var11_PolMinDedAll))) != 'false'">
-				<xsl:attribute name="PolMinDed6All">
-					<xsl:value-of select="string($var14_current/@PolMinDed6All)"/>
-				</xsl:attribute>
-			</xsl:if>
+			<xsl:attribute name="PolMinDed6All">
+				<xsl:choose>
+					<xsl:when test="string(boolean(string($var11_PolMinDedAll))) != 'false'">
+						<xsl:value-of select="string($var14_current/@PolMinDed6All)"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="'0'"/>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:attribute>
 			<xsl:variable name="var12_PolMaxDedAll">
 				<xsl:if test="$var14_current/@PolMaxDed6All">
 					<xsl:value-of select="'1'"/>
 				</xsl:if>
 			</xsl:variable>
-			<xsl:if test="string(boolean(string($var12_PolMaxDedAll))) != 'false'">
-				<xsl:attribute name="PolMaxDed6All">
-					<xsl:value-of select="string($var14_current/@PolMaxDed6All)"/>
-				</xsl:attribute>
-			</xsl:if>
+			<xsl:attribute name="PolMaxDed6All">
+				<xsl:choose>
+					<xsl:when test="string(boolean(string($var12_PolMaxDedAll))) != 'false'">
+						<xsl:value-of select="string($var14_current/@PolMaxDed6All)"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="'0'"/>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:attribute>
 			<xsl:variable name="var13_CondNumber">
 				<xsl:if test="$var14_current/@CondNumber">
 					<xsl:value-of select="'1'"/>
 				</xsl:if>
 			</xsl:variable>
-			<xsl:if test="string(boolean(string($var13_CondNumber))) != 'false'">
-				<xsl:attribute name="CondNumber">
-					<xsl:value-of select="string($var14_current/@CondNumber)"/>
-				</xsl:attribute>
-			</xsl:if>
+			<xsl:attribute name="CondNumber">
+				<xsl:choose>
+					<xsl:when test="string(boolean(string($var13_CondNumber))) != 'false'">
+						<xsl:value-of select="string($var14_current/@CondNumber)"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="'0'"/>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:attribute>
 		</rec>
 	</xsl:template>
 	<xsl:template name="agt:MapToDeterministic_CanAccA_var17_resultof_map">
