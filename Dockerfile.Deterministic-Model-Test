@@ -1,7 +1,7 @@
-FROM coreoasis/oasis_base:0.398.1
+FROM coreoasis/custom_keys_server:0.398.1
 
-RUN mkdir /var/www/oasis
-RUN mkdir /var/www/oasis/keys_server
+#RUN mkdir /var/www/oasis
+#RUN mkdir /var/www/oasis/keys_server
 COPY ./src/keys_server/__init__.py.base /var/www/oasis/keys_server/__init__.py
 RUN echo "\nfrom .Deterministic import *" >> /var/www/oasis/keys_server/__init__.py
 COPY ./src/keys_server/utils.py /var/www/oasis/keys_server/
@@ -10,7 +10,7 @@ RUN mkdir /var/www/oasis/keys_server/Deterministic
 COPY ./src/keys_server/Deterministic/ /var/www/oasis/keys_server/Deterministic/
 COPY ./src/keys_server/Deterministic/KeysServer.ini /var/www/oasis/oasis_keys_server/
 
-RUN mkdir /var/oasis
+#RUN mkdir /var/oasis
 RUN mkdir /var/oasis/keys_data && \
     chown www-data:www-data /var/oasis/keys_data && \
     chmod -R 744 /var/oasis/keys_data
@@ -18,5 +18,11 @@ COPY ./keys_data/Deterministic/ /var/oasis/keys_data/
 
 RUN pip install -r /var/www/oasis/keys_server/requirements.txt && \
     pip install -r /var/www/oasis/keys_server/Deterministic/requirements.txt
+
+RUN rm -rf /usr/bin/python 
+RUN ln -s /usr/bin/python3 /usr/bin/python
+
+#COPY ./startup.sh  /usr/local/bin/
+#RUN chmod +x /usr/local/bin/startup.sh
 
 ENTRYPOINT startup.sh
