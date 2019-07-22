@@ -33,14 +33,14 @@ http://www.altova.com/mapforce
 					<xsl:value-of select="string($var7_current/@AccNumber)"/>
 				</xsl:attribute>
 			</xsl:if>
-			<xsl:variable name="var3_LocNumber">
-				<xsl:if test="$var7_current/@LocNumber">
+			<xsl:variable name="var3_ROWID">
+				<xsl:if test="$var7_current/@ROW_ID">
 					<xsl:value-of select="'1'"/>
 				</xsl:if>
 			</xsl:variable>
-			<xsl:if test="string(boolean(string($var3_LocNumber))) != 'false'">
+			<xsl:if test="string(boolean(string($var3_ROWID))) != 'false'">
 				<xsl:attribute name="LocNumber">
-					<xsl:value-of select="string($var7_current/@LocNumber)"/>
+					<xsl:value-of select="string($var7_current/@ROW_ID)"/>
 				</xsl:attribute>
 			</xsl:if>
 			<xsl:variable name="var4_Latitude">

@@ -10,17 +10,335 @@ http://www.altova.com/mapforce
 -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:agt="http://www.altova.com/Mapforce/agt" xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="agt xs">
 	<xsl:output method="xml" encoding="UTF-8" indent="yes"/>
-	<xsl:template name="agt:MapToDeterministic_CanLocA_var2_function">
-		<xsl:param name="var1_current"/>
-		<xsl:copy-of select="$var1_current/@node()"/>
-		<xsl:copy-of select="$var1_current/node()"/>
+	<xsl:template name="agt:MapToDeterministic_CanLocA_var33_create_rec">
+		<xsl:param name="var32_current"/>
+		<rec>
+			<xsl:variable name="var1_PortNumber">
+				<xsl:if test="$var32_current/@PortNumber">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var1_PortNumber))) != 'false'">
+				<xsl:attribute name="PortNumber">
+					<xsl:value-of select="string($var32_current/@PortNumber)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var2_AccNumber">
+				<xsl:if test="$var32_current/@AccNumber">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var2_AccNumber))) != 'false'">
+				<xsl:attribute name="AccNumber">
+					<xsl:value-of select="string($var32_current/@AccNumber)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var3_LocNumber">
+				<xsl:if test="$var32_current/@LocNumber">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var3_LocNumber))) != 'false'">
+				<xsl:attribute name="LocNumber">
+					<xsl:value-of select="string($var32_current/@LocNumber)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var4_CountryCoder">
+				<xsl:if test="$var32_current/@CountryCoder">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var4_CountryCoder))) != 'false'">
+				<xsl:attribute name="CountryCoder">
+					<xsl:value-of select="string($var32_current/@CountryCoder)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var5_Latitude">
+				<xsl:if test="$var32_current/@Latitude">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var5_Latitude))) != 'false'">
+				<xsl:attribute name="Latitude">
+					<xsl:value-of select="string($var32_current/@Latitude)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var6_Longitude">
+				<xsl:if test="$var32_current/@Longitude">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var6_Longitude))) != 'false'">
+				<xsl:attribute name="Longitude">
+					<xsl:value-of select="string($var32_current/@Longitude)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var7_OccupancyCode">
+				<xsl:if test="$var32_current/@OccupancyCode">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var7_OccupancyCode))) != 'false'">
+				<xsl:attribute name="OccupancyCode">
+					<xsl:value-of select="string($var32_current/@OccupancyCode)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var8_ConstructionCode">
+				<xsl:if test="$var32_current/@ConstructionCode">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var8_ConstructionCode))) != 'false'">
+				<xsl:attribute name="ConstructionCode">
+					<xsl:value-of select="string($var32_current/@ConstructionCode)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var9_LocUserDef">
+				<xsl:if test="$var32_current/@LocUserDef1">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var9_LocUserDef))) != 'false'">
+				<xsl:attribute name="LocUserDef1">
+					<xsl:value-of select="string($var32_current/@LocUserDef1)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var10_LocPerilsCovered">
+				<xsl:if test="$var32_current/@LocPerilsCovered">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var10_LocPerilsCovered))) != 'false'">
+				<xsl:attribute name="LocPerilsCovered">
+					<xsl:value-of select="string($var32_current/@LocPerilsCovered)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var11_BuildingTIV">
+				<xsl:if test="$var32_current/@BuildingTIV">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var11_BuildingTIV))) != 'false'">
+				<xsl:attribute name="BuildingTIV">
+					<xsl:value-of select="string($var32_current/@BuildingTIV)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var12_OtherTIV">
+				<xsl:if test="$var32_current/@OtherTIV">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var12_OtherTIV))) != 'false'">
+				<xsl:attribute name="OtherTIV">
+					<xsl:value-of select="string($var32_current/@OtherTIV)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var13_ContentsTIV">
+				<xsl:if test="$var32_current/@ContentsTIV">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var13_ContentsTIV))) != 'false'">
+				<xsl:attribute name="ContentsTIV">
+					<xsl:value-of select="string($var32_current/@ContentsTIV)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var14_BITIV">
+				<xsl:if test="$var32_current/@BITIV">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var14_BITIV))) != 'false'">
+				<xsl:attribute name="BITIV">
+					<xsl:value-of select="string($var32_current/@BITIV)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var15_LocCurrency">
+				<xsl:if test="$var32_current/@LocCurrency">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var15_LocCurrency))) != 'false'">
+				<xsl:attribute name="LocCurrency">
+					<xsl:value-of select="string($var32_current/@LocCurrency)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var16_LocDedBuilding">
+				<xsl:if test="$var32_current/@LocDed1Building">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var16_LocDedBuilding))) != 'false'">
+				<xsl:attribute name="LocDed1Building">
+					<xsl:value-of select="string($var32_current/@LocDed1Building)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var17_LocDedOther">
+				<xsl:if test="$var32_current/@LocDed2Other">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var17_LocDedOther))) != 'false'">
+				<xsl:attribute name="LocDed2Other">
+					<xsl:value-of select="string($var32_current/@LocDed2Other)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var18_LocDedContents">
+				<xsl:if test="$var32_current/@LocDed3Contents">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var18_LocDedContents))) != 'false'">
+				<xsl:attribute name="LocDed3Contents">
+					<xsl:value-of select="string($var32_current/@LocDed3Contents)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var19_LocDedBI">
+				<xsl:if test="$var32_current/@LocDed4BI">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var19_LocDedBI))) != 'false'">
+				<xsl:attribute name="LocDed4BI">
+					<xsl:value-of select="string($var32_current/@LocDed4BI)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var20_LocDedPD">
+				<xsl:if test="$var32_current/@LocDed5PD">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var20_LocDedPD))) != 'false'">
+				<xsl:attribute name="LocDed5PD">
+					<xsl:value-of select="string($var32_current/@LocDed5PD)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var21_LocDedAll">
+				<xsl:if test="$var32_current/@LocDed6All">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var21_LocDedAll))) != 'false'">
+				<xsl:attribute name="LocDed6All">
+					<xsl:value-of select="string($var32_current/@LocDed6All)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var22_LocLimitBuilding">
+				<xsl:if test="$var32_current/@LocLimit1Building">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var22_LocLimitBuilding))) != 'false'">
+				<xsl:attribute name="LocLimit1Building">
+					<xsl:value-of select="string($var32_current/@LocLimit1Building)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var23_LocLimitOther">
+				<xsl:if test="$var32_current/@LocLimit2Other">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var23_LocLimitOther))) != 'false'">
+				<xsl:attribute name="LocLimit2Other">
+					<xsl:value-of select="string($var32_current/@LocLimit2Other)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var24_LocLimitContents">
+				<xsl:if test="$var32_current/@LocLimit3Contents">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var24_LocLimitContents))) != 'false'">
+				<xsl:attribute name="LocLimit3Contents">
+					<xsl:value-of select="string($var32_current/@LocLimit3Contents)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var25_LocLimitBI">
+				<xsl:if test="$var32_current/@LocLimit4BI">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var25_LocLimitBI))) != 'false'">
+				<xsl:attribute name="LocLimit4BI">
+					<xsl:value-of select="string($var32_current/@LocLimit4BI)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var26_LocLimitPD">
+				<xsl:if test="$var32_current/@LocLimit5PD">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var26_LocLimitPD))) != 'false'">
+				<xsl:attribute name="LocLimit5PD">
+					<xsl:value-of select="string($var32_current/@LocLimit5PD)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var27_LocLimitAll">
+				<xsl:if test="$var32_current/@LocLimit6All">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var27_LocLimitAll))) != 'false'">
+				<xsl:attribute name="LocLimit6All">
+					<xsl:value-of select="string($var32_current/@LocLimit6All)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var28_CondNumber">
+				<xsl:if test="$var32_current/@CondNumber">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var28_CondNumber))) != 'false'">
+				<xsl:attribute name="CondNumber">
+					<xsl:value-of select="string($var32_current/@CondNumber)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var29_CondPriority">
+				<xsl:if test="$var32_current/@CondPriority">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var29_CondPriority))) != 'false'">
+				<xsl:attribute name="CondPriority">
+					<xsl:value-of select="string($var32_current/@CondPriority)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var30_CondMinDedAll">
+				<xsl:if test="$var32_current/@CondMinDed6All">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var30_CondMinDedAll))) != 'false'">
+				<xsl:attribute name="CondMinDed6All">
+					<xsl:value-of select="string($var32_current/@CondMinDed6All)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var31_CondLimitAll">
+				<xsl:if test="$var32_current/@CondLimit6All">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var31_CondLimitAll))) != 'false'">
+				<xsl:attribute name="CondLimit6All">
+					<xsl:value-of select="string($var32_current/@CondLimit6All)"/>
+				</xsl:attribute>
+			</xsl:if>
+		</rec>
+	</xsl:template>
+	<xsl:template name="agt:MapToDeterministic_CanLocA_var35_resultof_map">
+		<xsl:param name="var34_current"/>
+		<xsl:for-each select="$var34_current/rec">
+			<xsl:call-template name="agt:MapToDeterministic_CanLocA_var33_create_rec">
+				<xsl:with-param name="var32_current" select="."/>
+			</xsl:call-template>
+		</xsl:for-each>
 	</xsl:template>
 	<xsl:template match="/">
 		<root>
 			<xsl:attribute name="xsi:noNamespaceSchemaLocation" namespace="http://www.w3.org/2001/XMLSchema-instance">C:/Users/Administrator/Desktop/git/Deterministic-Model-Test/flamingo/ValidationFiles/Deterministic_CanLocA.xsd</xsl:attribute>
 			<xsl:for-each select="root">
-				<xsl:call-template name="agt:MapToDeterministic_CanLocA_var2_function">
-					<xsl:with-param name="var1_current" select="."/>
+				<xsl:call-template name="agt:MapToDeterministic_CanLocA_var35_resultof_map">
+					<xsl:with-param name="var34_current" select="."/>
 				</xsl:call-template>
 			</xsl:for-each>
 		</root>

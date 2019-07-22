@@ -6,30 +6,9 @@
 		<properties SelectedLanguage="xslt"/>
 		<structure>
 			<children>
-				<component name="Deterministic_SourceLoc" library="xml" uid="2" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="274" lty="260" rbx="760" rby="1047"/>
-					<data>
-						<root scrollposition="1">
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="FileInstance" ns="1" expanded="1">
-								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-									<entry name="root" outkey="1" expanded="1"/>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\ValidationFiles\Deterministic_SourceLoc.xsd" outputinstance="..\ValidationFiles\OED_SourceLoc.xml" instanceroot="{}root"/>
-						<wsdl/>
-					</data>
-				</component>
 				<component name="Deterministic_CanLocA" library="xml" uid="3" kind="14">
 					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
-					<view ltx="1924" lty="231" rbx="2426" rby="987"/>
+					<view ltx="794" lty="59" rbx="1296" rby="815"/>
 					<data>
 						<root scrollposition="1">
 							<header>
@@ -40,7 +19,41 @@
 							</header>
 							<entry name="FileInstance" ns="1" expanded="1">
 								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-									<entry name="root" inpkey="2" expanded="1"/>
+									<entry name="root" inpkey="2" expanded="1">
+										<entry name="rec" inpkey="4" expanded="1">
+											<entry name="PortNumber" type="attribute" inpkey="5"/>
+											<entry name="AccNumber" type="attribute" inpkey="6"/>
+											<entry name="LocNumber" type="attribute" inpkey="7"/>
+											<entry name="CountryCoder" type="attribute" inpkey="8"/>
+											<entry name="Latitude" type="attribute" inpkey="9"/>
+											<entry name="Longitude" type="attribute" inpkey="10"/>
+											<entry name="OccupancyCode" type="attribute" inpkey="11"/>
+											<entry name="ConstructionCode" type="attribute" inpkey="12"/>
+											<entry name="LocUserDef1" type="attribute" inpkey="13"/>
+											<entry name="LocPerilsCovered" type="attribute" inpkey="14"/>
+											<entry name="BuildingTIV" type="attribute" inpkey="15"/>
+											<entry name="OtherTIV" type="attribute" inpkey="16"/>
+											<entry name="ContentsTIV" type="attribute" inpkey="17"/>
+											<entry name="BITIV" type="attribute" inpkey="18"/>
+											<entry name="LocCurrency" type="attribute" inpkey="19"/>
+											<entry name="LocDed1Building" type="attribute" inpkey="20"/>
+											<entry name="LocDed2Other" type="attribute" inpkey="21"/>
+											<entry name="LocDed3Contents" type="attribute" inpkey="22"/>
+											<entry name="LocDed4BI" type="attribute" inpkey="23"/>
+											<entry name="LocDed5PD" type="attribute" inpkey="24"/>
+											<entry name="LocDed6All" type="attribute" inpkey="25"/>
+											<entry name="LocLimit1Building" type="attribute" inpkey="26"/>
+											<entry name="LocLimit2Other" type="attribute" inpkey="27"/>
+											<entry name="LocLimit3Contents" type="attribute" inpkey="28"/>
+											<entry name="LocLimit4BI" type="attribute" inpkey="29"/>
+											<entry name="LocLimit5PD" type="attribute" inpkey="30"/>
+											<entry name="LocLimit6All" type="attribute" inpkey="31"/>
+											<entry name="CondNumber" type="attribute" inpkey="32"/>
+											<entry name="CondPriority" type="attribute" inpkey="33"/>
+											<entry name="CondMinDed6All" type="attribute" inpkey="34"/>
+											<entry name="CondLimit6All" type="attribute" inpkey="35"/>
+										</entry>
+									</entry>
 								</entry>
 							</entry>
 						</root>
@@ -48,19 +61,228 @@
 						<wsdl/>
 					</data>
 				</component>
+				<component name="Deterministic_SourceLoc" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="70" lty="59" rbx="556" rby="846"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="root" outkey="1" expanded="1">
+										<entry name="rec" outkey="36" expanded="1">
+											<entry name="PortNumber" type="attribute" outkey="37"/>
+											<entry name="AccNumber" type="attribute" outkey="38"/>
+											<entry name="LocNumber" type="attribute" outkey="39"/>
+											<entry name="CountryCoder" type="attribute" outkey="40"/>
+											<entry name="Latitude" type="attribute" outkey="41"/>
+											<entry name="Longitude" type="attribute" outkey="42"/>
+											<entry name="OccupancyCode" type="attribute" outkey="43"/>
+											<entry name="ConstructionCode" type="attribute" outkey="44"/>
+											<entry name="LocUserDef1" type="attribute" outkey="45"/>
+											<entry name="LocPerilsCovered" type="attribute" outkey="46"/>
+											<entry name="BuildingTIV" type="attribute" outkey="47"/>
+											<entry name="OtherTIV" type="attribute" outkey="48"/>
+											<entry name="ContentsTIV" type="attribute" outkey="49"/>
+											<entry name="BITIV" type="attribute" outkey="50"/>
+											<entry name="LocCurrency" type="attribute" outkey="51"/>
+											<entry name="LocDed1Building" type="attribute" outkey="52"/>
+											<entry name="LocDed2Other" type="attribute" outkey="53"/>
+											<entry name="LocDed3Contents" type="attribute" outkey="54"/>
+											<entry name="LocDed4BI" type="attribute" outkey="55"/>
+											<entry name="LocDed5PD" type="attribute" outkey="56"/>
+											<entry name="LocDed6All" type="attribute" outkey="57"/>
+											<entry name="LocLimit1Building" type="attribute" outkey="58"/>
+											<entry name="LocLimit2Other" type="attribute" outkey="59"/>
+											<entry name="LocLimit3Contents" type="attribute" outkey="60"/>
+											<entry name="LocLimit4BI" type="attribute" outkey="61"/>
+											<entry name="LocLimit5PD" type="attribute" outkey="62"/>
+											<entry name="LocLimit6All" type="attribute" outkey="63"/>
+											<entry name="CondNumber" type="attribute" outkey="64"/>
+											<entry name="CondPriority" type="attribute" outkey="65"/>
+											<entry name="CondMinDed6All" type="attribute" outkey="66"/>
+											<entry name="CondLimit6All" type="attribute" outkey="67"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\ValidationFiles\Deterministic_SourceLoc.xsd" outputinstance="..\ValidationFiles\OED_SourceLoc.xml" instanceroot="{}root"/>
+						<wsdl/>
+					</data>
+				</component>
 			</children>
 			<graph directed="1">
-				<edges>
-					<edge edgekey="3">
-						<data>
-							<dataconnection type="2"/>
-						</data>
-					</edge>
-				</edges>
+				<edges/>
 				<vertices>
 					<vertex vertexkey="1">
 						<edges>
-							<edge vertexkey="2" edgekey="3"/>
+							<edge vertexkey="2" edgekey="68"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="36">
+						<edges>
+							<edge vertexkey="4" edgekey="69"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="37">
+						<edges>
+							<edge vertexkey="5" edgekey="70"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="38">
+						<edges>
+							<edge vertexkey="6" edgekey="71"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="39">
+						<edges>
+							<edge vertexkey="7" edgekey="72"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="40">
+						<edges>
+							<edge vertexkey="8" edgekey="73"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="41">
+						<edges>
+							<edge vertexkey="9" edgekey="74"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="42">
+						<edges>
+							<edge vertexkey="10" edgekey="75"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="43">
+						<edges>
+							<edge vertexkey="11" edgekey="76"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="44">
+						<edges>
+							<edge vertexkey="12" edgekey="77"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="45">
+						<edges>
+							<edge vertexkey="13" edgekey="78"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="46">
+						<edges>
+							<edge vertexkey="14" edgekey="79"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="47">
+						<edges>
+							<edge vertexkey="15" edgekey="80"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="48">
+						<edges>
+							<edge vertexkey="16" edgekey="81"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="49">
+						<edges>
+							<edge vertexkey="17" edgekey="82"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="50">
+						<edges>
+							<edge vertexkey="18" edgekey="83"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51">
+						<edges>
+							<edge vertexkey="19" edgekey="84"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="52">
+						<edges>
+							<edge vertexkey="20" edgekey="85"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="53">
+						<edges>
+							<edge vertexkey="21" edgekey="86"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="54">
+						<edges>
+							<edge vertexkey="22" edgekey="87"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="55">
+						<edges>
+							<edge vertexkey="23" edgekey="88"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="56">
+						<edges>
+							<edge vertexkey="24" edgekey="89"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="57">
+						<edges>
+							<edge vertexkey="25" edgekey="90"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="58">
+						<edges>
+							<edge vertexkey="26" edgekey="91"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="59">
+						<edges>
+							<edge vertexkey="27" edgekey="92"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="60">
+						<edges>
+							<edge vertexkey="28" edgekey="93"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="61">
+						<edges>
+							<edge vertexkey="29" edgekey="94"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="62">
+						<edges>
+							<edge vertexkey="30" edgekey="95"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="63">
+						<edges>
+							<edge vertexkey="31" edgekey="96"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="64">
+						<edges>
+							<edge vertexkey="32" edgekey="97"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="65">
+						<edges>
+							<edge vertexkey="33" edgekey="98"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="66">
+						<edges>
+							<edge vertexkey="34" edgekey="99"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="67">
+						<edges>
+							<edge vertexkey="35" edgekey="100"/>
 						</edges>
 					</vertex>
 				</vertices>

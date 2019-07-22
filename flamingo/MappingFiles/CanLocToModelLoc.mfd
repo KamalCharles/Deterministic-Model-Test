@@ -8,7 +8,7 @@
 			<children>
 				<component name="Deterministic_ModelLoc" library="xml" uid="3" kind="14">
 					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
-					<view ltx="1295" lty="502" rbx="1717" rby="866"/>
+					<view ltx="647" lty="130" rbx="1069" rby="494"/>
 					<data>
 						<root>
 							<header>
@@ -38,7 +38,7 @@
 				</component>
 				<component name="Deterministic_CanLocB" library="xml" uid="2" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="688" lty="502" rbx="976" rby="998"/>
+					<view ltx="223" lty="120" rbx="511" rby="616"/>
 					<data>
 						<root scrollposition="1">
 							<header>
@@ -51,9 +51,9 @@
 								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
 									<entry name="root" outkey="7" expanded="1">
 										<entry name="rec" outkey="8" expanded="1">
+											<entry name="ROW_ID" type="attribute" outkey="27"/>
 											<entry name="PortNumber" type="attribute" outkey="21"/>
 											<entry name="AccNumber" type="attribute" outkey="22"/>
-											<entry name="LocNumber" type="attribute" outkey="23"/>
 											<entry name="Latitude" type="attribute" outkey="10"/>
 											<entry name="Longitude" type="attribute" outkey="11"/>
 											<entry name="LocUserDef1" type="attribute" outkey="12"/>
@@ -105,9 +105,9 @@
 							<edge vertexkey="20" edgekey="25"/>
 						</edges>
 					</vertex>
-					<vertex vertexkey="23">
+					<vertex vertexkey="27">
 						<edges>
-							<edge vertexkey="3" edgekey="26"/>
+							<edge vertexkey="3" edgekey="28"/>
 						</edges>
 					</vertex>
 				</vertices>
