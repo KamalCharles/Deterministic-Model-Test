@@ -10,56 +10,76 @@ http://www.altova.com/mapforce
 -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:agt="http://www.altova.com/Mapforce/agt" xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="agt xs">
 	<xsl:output method="xml" encoding="UTF-8" indent="yes"/>
-	<xsl:template name="agt:MapToDeterministic_ModelLoc_var6_create_rec">
-		<xsl:param name="var5_current"/>
+	<xsl:template name="agt:MapToDeterministic_ModelLoc_var8_create_rec">
+		<xsl:param name="var7_current"/>
 		<rec>
-			<xsl:variable name="var1_ROWID">
-				<xsl:if test="$var5_current/@ROW_ID">
+			<xsl:variable name="var1_PortNumber">
+				<xsl:if test="$var7_current/@PortNumber">
 					<xsl:value-of select="'1'"/>
 				</xsl:if>
 			</xsl:variable>
-			<xsl:if test="string(boolean(string($var1_ROWID))) != 'false'">
+			<xsl:if test="string(boolean(string($var1_PortNumber))) != 'false'">
+				<xsl:attribute name="PortNumber">
+					<xsl:value-of select="string($var7_current/@PortNumber)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var2_AccNumber">
+				<xsl:if test="$var7_current/@AccNumber">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var2_AccNumber))) != 'false'">
+				<xsl:attribute name="AccNumber">
+					<xsl:value-of select="string($var7_current/@AccNumber)"/>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:variable name="var3_LocNumber">
+				<xsl:if test="$var7_current/@LocNumber">
+					<xsl:value-of select="'1'"/>
+				</xsl:if>
+			</xsl:variable>
+			<xsl:if test="string(boolean(string($var3_LocNumber))) != 'false'">
 				<xsl:attribute name="LocNumber">
-					<xsl:value-of select="string($var5_current/@ROW_ID)"/>
+					<xsl:value-of select="string($var7_current/@LocNumber)"/>
 				</xsl:attribute>
 			</xsl:if>
-			<xsl:variable name="var2_Latitude">
-				<xsl:if test="$var5_current/@Latitude">
+			<xsl:variable name="var4_Latitude">
+				<xsl:if test="$var7_current/@Latitude">
 					<xsl:value-of select="'1'"/>
 				</xsl:if>
 			</xsl:variable>
-			<xsl:if test="string(boolean(string($var2_Latitude))) != 'false'">
+			<xsl:if test="string(boolean(string($var4_Latitude))) != 'false'">
 				<xsl:attribute name="Latitude">
-					<xsl:value-of select="string($var5_current/@Latitude)"/>
+					<xsl:value-of select="string($var7_current/@Latitude)"/>
 				</xsl:attribute>
 			</xsl:if>
-			<xsl:variable name="var3_Longitude">
-				<xsl:if test="$var5_current/@Longitude">
+			<xsl:variable name="var5_Longitude">
+				<xsl:if test="$var7_current/@Longitude">
 					<xsl:value-of select="'1'"/>
 				</xsl:if>
 			</xsl:variable>
-			<xsl:if test="string(boolean(string($var3_Longitude))) != 'false'">
+			<xsl:if test="string(boolean(string($var5_Longitude))) != 'false'">
 				<xsl:attribute name="Longitude">
-					<xsl:value-of select="string($var5_current/@Longitude)"/>
+					<xsl:value-of select="string($var7_current/@Longitude)"/>
 				</xsl:attribute>
 			</xsl:if>
-			<xsl:variable name="var4_LocUserDef">
-				<xsl:if test="$var5_current/@LocUserDef1">
+			<xsl:variable name="var6_LocUserDef">
+				<xsl:if test="$var7_current/@LocUserDef1">
 					<xsl:value-of select="'1'"/>
 				</xsl:if>
 			</xsl:variable>
-			<xsl:if test="string(boolean(string($var4_LocUserDef))) != 'false'">
+			<xsl:if test="string(boolean(string($var6_LocUserDef))) != 'false'">
 				<xsl:attribute name="LocUserDef1">
-					<xsl:value-of select="string($var5_current/@LocUserDef1)"/>
+					<xsl:value-of select="string($var7_current/@LocUserDef1)"/>
 				</xsl:attribute>
 			</xsl:if>
 		</rec>
 	</xsl:template>
-	<xsl:template name="agt:MapToDeterministic_ModelLoc_var8_resultof_map">
-		<xsl:param name="var7_current"/>
-		<xsl:for-each select="$var7_current/rec">
-			<xsl:call-template name="agt:MapToDeterministic_ModelLoc_var6_create_rec">
-				<xsl:with-param name="var5_current" select="."/>
+	<xsl:template name="agt:MapToDeterministic_ModelLoc_var10_resultof_map">
+		<xsl:param name="var9_current"/>
+		<xsl:for-each select="$var9_current/rec">
+			<xsl:call-template name="agt:MapToDeterministic_ModelLoc_var8_create_rec">
+				<xsl:with-param name="var7_current" select="."/>
 			</xsl:call-template>
 		</xsl:for-each>
 	</xsl:template>
@@ -67,8 +87,8 @@ http://www.altova.com/mapforce
 		<root>
 			<xsl:attribute name="xsi:noNamespaceSchemaLocation" namespace="http://www.w3.org/2001/XMLSchema-instance">C:/Users/Administrator/Desktop/git/Deterministic-Model-Test/flamingo/ValidationFiles/Deterministic_ModelLoc.xsd</xsl:attribute>
 			<xsl:for-each select="root">
-				<xsl:call-template name="agt:MapToDeterministic_ModelLoc_var8_resultof_map">
-					<xsl:with-param name="var7_current" select="."/>
+				<xsl:call-template name="agt:MapToDeterministic_ModelLoc_var10_resultof_map">
+					<xsl:with-param name="var9_current" select="."/>
 				</xsl:call-template>
 			</xsl:for-each>
 		</root>

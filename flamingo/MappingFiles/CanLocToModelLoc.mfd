@@ -6,34 +6,6 @@
 		<properties SelectedLanguage="xslt"/>
 		<structure>
 			<children>
-				<component name="Deterministic_CanLocB" library="xml" uid="2" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="688" lty="502" rbx="976" rby="998"/>
-					<data>
-						<root scrollposition="1">
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="FileInstance" ns="1" expanded="1">
-								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-									<entry name="root" outkey="7" expanded="1">
-										<entry name="rec" outkey="8" expanded="1">
-											<entry name="ROW_ID" type="attribute" outkey="9"/>
-											<entry name="Latitude" type="attribute" outkey="10"/>
-											<entry name="Longitude" type="attribute" outkey="11"/>
-											<entry name="LocUserDef1" type="attribute" outkey="12"/>
-										</entry>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\ValidationFiles\Deterministic_CanLocB.xsd" outputinstance="..\ValidationFiles\OED_CanLocB.xml" instanceroot="{}root"/>
-						<wsdl/>
-					</data>
-				</component>
 				<component name="Deterministic_ModelLoc" library="xml" uid="3" kind="14">
 					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
 					<view ltx="1295" lty="502" rbx="1717" rby="866"/>
@@ -49,6 +21,8 @@
 								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
 									<entry name="root" inpkey="1" expanded="1">
 										<entry name="rec" inpkey="2" expanded="1">
+											<entry name="PortNumber" type="attribute" inpkey="19"/>
+											<entry name="AccNumber" type="attribute" inpkey="20"/>
 											<entry name="LocNumber" type="attribute" inpkey="3"/>
 											<entry name="Latitude" type="attribute" inpkey="4"/>
 											<entry name="Longitude" type="attribute" inpkey="5"/>
@@ -59,6 +33,36 @@
 							</entry>
 						</root>
 						<document schema="..\ValidationFiles\Deterministic_ModelLoc.xsd" outputinstance="..\ValidationFiles\OED_ModelLoc.xml" instanceroot="{}root"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="Deterministic_CanLocB" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="688" lty="502" rbx="976" rby="998"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="root" outkey="7" expanded="1">
+										<entry name="rec" outkey="8" expanded="1">
+											<entry name="PortNumber" type="attribute" outkey="21"/>
+											<entry name="AccNumber" type="attribute" outkey="22"/>
+											<entry name="LocNumber" type="attribute" outkey="23"/>
+											<entry name="Latitude" type="attribute" outkey="10"/>
+											<entry name="Longitude" type="attribute" outkey="11"/>
+											<entry name="LocUserDef1" type="attribute" outkey="12"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\ValidationFiles\Deterministic_CanLocB.xsd" outputinstance="..\ValidationFiles\OED_CanLocB.xml" instanceroot="{}root"/>
 						<wsdl/>
 					</data>
 				</component>
@@ -76,11 +80,6 @@
 							<edge vertexkey="2" edgekey="14"/>
 						</edges>
 					</vertex>
-					<vertex vertexkey="9">
-						<edges>
-							<edge vertexkey="3" edgekey="15"/>
-						</edges>
-					</vertex>
 					<vertex vertexkey="10">
 						<edges>
 							<edge vertexkey="4" edgekey="16"/>
@@ -94,6 +93,21 @@
 					<vertex vertexkey="12">
 						<edges>
 							<edge vertexkey="6" edgekey="18"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="21">
+						<edges>
+							<edge vertexkey="19" edgekey="24"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="22">
+						<edges>
+							<edge vertexkey="20" edgekey="25"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="23">
+						<edges>
+							<edge vertexkey="3" edgekey="26"/>
 						</edges>
 					</vertex>
 				</vertices>

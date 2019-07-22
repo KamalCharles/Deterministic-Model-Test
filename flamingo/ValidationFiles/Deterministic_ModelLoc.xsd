@@ -5,6 +5,8 @@
 			<xs:sequence>
 				<xs:element name="rec" maxOccurs="unbounded">
 					<xs:complexType>
+						<xs:attribute name="PortNumber" type="xs:string"/>
+						<xs:attribute name="AccNumber" type="xs:string"/>
 						<xs:attribute name="LocNumber" type="xs:string"/>
 						<xs:attribute name="Latitude" type="xs:string"/>
 						<xs:attribute name="Longitude" type="xs:string"/>
