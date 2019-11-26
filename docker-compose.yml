@@ -135,3 +135,5 @@ services:
     links:
      - celery-db
      - rabbit
+
+    
