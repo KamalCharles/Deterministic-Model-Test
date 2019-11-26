@@ -82,7 +82,7 @@ services:
      - OASIS_CELERY_DB_PORT=3306
     volumes:
      - ./:/var/oasis/:rw
-     - model_data/Deterministic:/var/oasis/model_data/Deterministic  
+     - /model_data/Deterministic:/var/oasis/model_data/Deterministic  
      - ./docker-shared-fs:/shared-fs:rw
 
   server-db:
