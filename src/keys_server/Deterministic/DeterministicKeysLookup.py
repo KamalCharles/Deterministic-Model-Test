@@ -45,22 +45,35 @@ class DeterministicKeysLookup(OasisBaseKeysLookup):
         """
         Process location rows - passed in as a pandas dataframe.
         """
-        if 'loc_id' not in loc_df:
-            loc_df['loc_id'] = get_ids(exposure_df, ['portnumber', 'accnumber', 'locnumber'])
+        #if 'loc_id' not in loc_df:
+        #    loc_df['loc_id'] = get_ids(exposure_df, ['portnumber', 'accnumber', 'locnumber'])
 
-        print(loc_df)
-        for index, row in loc_df.iterrows():
-            
-            locuserdef1 = row['locuserdef1']
-            locnumber = row['loc_id']
-            print("locnumber: ",int(locnumber))
-            yield {
-                "loc_id": int(locnumber),
-                "peril_id": 'WTC',
-                "coverage_type": 1,
-                "area_peril_id": 1,
-                "vulnerability_id": int(locuserdef1),
-                "message": '',
-                "status": 'success'
+        required_columns = {
+            1:"flexilocbuildingdr",
+            2:"flexilocotherdr",
+            3:"flexiloccontentsdr",
+            4:"flexilocbidr"
             }
+
+        #set dr = 100 where not provided
+        loc_df_cols = loc_df.columns
+        for col_id in required_columns:
+            if required_columns[col_id] not in loc_df_cols:
+                loc_df[required_columns[col_id]] = 100
+
+
+        for index, row in loc_df.iterrows():
+            for cov in range(1,5):
+                dr_col = required_columns[cov]
+                dr = row[[dr_col]]
+                locnumber = row['loc_id']
+                yield {
+                    "loc_id": int(locnumber),
+                    "peril_id": 'WTC',
+                    "coverage_type": int(cov),
+                    "area_peril_id": 1,
+                    "vulnerability_id": int(dr),
+                    "message": '',
+                    "status": 'success'
+                }
 

@@ -1,0 +1,13 @@
+{
+    "lookup_settings":[
+        {
+            "PerilCodes":{
+                "type":"dictionary",
+                "values":{
+                    "WTC": "Wind"
+                }
+            }
+        }
+    ]
+}
+
