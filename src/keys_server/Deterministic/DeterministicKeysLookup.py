@@ -27,7 +27,10 @@ from oasislmf.utils import *
 class DeterministicKeysLookup(OasisBaseKeysLookup):
 
     @oasis_log()
-    def __init__(self, keys_data_directory=None, supplier='OasisLMF', model_name='Deterministic', model_version='0.0.1'):
+    def __init__(self, keys_data_directory=None, supplier='OasisLMF', model_name='Deterministic', model_version='0.0.1',
+        complex_lookup_config_fp=None,
+        output_directory=None
+        ):
         """
         Initialise the static data required for the lookup.
         """
@@ -35,7 +38,9 @@ class DeterministicKeysLookup(OasisBaseKeysLookup):
             keys_data_directory,
             supplier,
             model_name,
-            model_version
+            model_version,
+            complex_lookup_config_fp,
+            output_directory
         )
 
 
