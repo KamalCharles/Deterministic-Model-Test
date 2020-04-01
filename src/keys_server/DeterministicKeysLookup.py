@@ -5,31 +5,35 @@ __all__ = [
 ] 
 
 # Python standard library imports
-import io
+#import io
 import json
-import logging
-import math
-import os
+#import logging
+#import math
+#import os
 
 # Python non-standard library imports
 import pandas as pd
 
 # Oasis utils and other Oasis imports
-import importlib; import oasislmf
-from oasislmf.utils.data import get_dataframe 
+#import importlib; import oasislmf
+#from oasislmf.utils.data import get_dataframe 
 from oasislmf.utils.log import oasis_log
 #from oasislmf.utils.metadata import OASIS_KEYS_STATUS
 from oasislmf.model_preparation.lookup import OasisBaseKeysLookup
-from oasislmf.utils.data import get_ids
+#from oasislmf.utils.data import get_ids
 # Model keys server imports
-from oasislmf.utils import *
+#from oasislmf.utils import *
 
 class DeterministicKeysLookup(OasisBaseKeysLookup):
 
     @oasis_log()
-    def __init__(self, keys_data_directory=None, supplier='OasisLMF', model_name='Deterministic', model_version='0.0.1',
-        complex_lookup_config_fp=None,
-        output_directory=None
+    def __init__(self, 
+            keys_data_directory=None, 
+            supplier='OasisLMF', 
+            model_name='Deterministic', 
+            model_version='0.0.1',
+            complex_lookup_config_fp=None,
+            output_directory=None
         ):
         """
         Initialise the static data required for the lookup.
@@ -50,9 +54,6 @@ class DeterministicKeysLookup(OasisBaseKeysLookup):
         """
         Process location rows - passed in as a pandas dataframe.
         """
-        #if 'loc_id' not in loc_df:
-        #    loc_df['loc_id'] = get_ids(exposure_df, ['portnumber', 'accnumber', 'locnumber'])
-
         required_columns = {
             1:"flexilocbuildingdr",
             2:"flexilocotherdr",

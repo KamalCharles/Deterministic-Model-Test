@@ -1,9 +1,0 @@
-{
-    "analysis_settings_json": "analysis_settings.json",
-    "lookup_data_dir": "keys_data/Deterministic",
-    "lookup_package_dir": "src/keys_server",
-    "model_data_dir": "model_data/Deterministic",
-    "model_version_csv": "keys_data/Deterministic/ModelVersion.csv",
-    "oed_accounts_csv": "tests/data/SourceFiles/SourceAccDeterministic.csv",
-    "oed_location_csv": "tests/data/SourceFiles/SourceLocDeterministic.csv"
-}

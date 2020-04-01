@@ -23,4 +23,4 @@ services:
      - OASIS_CELERY_DB_PORT=3306
      - OASIS_KEEP_RUN_DIR=True
     volumes:
-     - /home/ubuntu/docker-shared-fs:/shared-fs:rw
+     - ./docker-shared-fs:/shared-fs:rw
