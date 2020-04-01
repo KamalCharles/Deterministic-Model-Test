@@ -1,0 +1,26 @@
+version: '3'
+services:
+   deterministic_worker:
+    restart: always
+    privileged: true
+    image: deterministic_test
+    links:
+     - celery-db
+     - rabbit:myrabbit
+    environment:
+     - OASIS_MODEL_SUPPLIER_ID=OasisLMF
+     - OASIS_MODEL_ID=Deterministic
+     - OASIS_MODEL_VERSION_ID=0.0.1
+     - OASIS_RABBIT_HOST=rabbit
+     - OASIS_RABBIT_PORT=5672
+     - OASIS_RABBIT_USER=rabbit
+     - OASIS_RABBIT_PASS=rabbit
+     - OASIS_CELERY_DB_ENGINE=db+mysql+pymysql
+     - OASIS_CELERY_DB_HOST=celery-db
+     - OASIS_CELERY_DB_PASS=password
+     - OASIS_CELERY_DB_USER=celery
+     - OASIS_CELERY_DB_NAME=celery
+     - OASIS_CELERY_DB_PORT=3306
+     - OASIS_KEEP_RUN_DIR=True
+    volumes:
+     - /home/ubuntu/docker-shared-fs:/shared-fs:rw
