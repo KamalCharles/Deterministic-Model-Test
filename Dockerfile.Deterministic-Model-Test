@@ -3,8 +3,8 @@ FROM coreoasis/model_worker:latest
 ARG BASE_DIR=/home/worker
 COPY ./ $BASE_DIR/Deterministic/
 
-COPY ./keys_data/ /var/oasis/keys_data
-COPY ./model_data/ /var/oasis/model_data
+#COPY ./keys_data/ /var/oasis/keys_data
+#COPY ./model_data/ /var/oasis/model_data
 
 RUN sed -i 's/OASISLMF_CONFIG = \/var\/oasis\/oasislmf.json/OASISLMF_CONFIG = \/home\/worker\/Deterministic\/oasislmf_deploy.json/g' conf.ini
 RUN sed -i 's/MODEL_SETTINGS_FILE = \/var\/oasis\/meta-data\/model_settings.json/MODEL_SETTINGS_FILE = \/home\/worker\/Deterministic\/meta-data\/model_settings.json/g' conf.ini
