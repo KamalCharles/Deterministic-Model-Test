@@ -5,24 +5,18 @@ __all__ = [
 ] 
 
 # Python standard library imports
-#import io
 import json
-#import logging
-#import math
-#import os
+import io
+import os
 
 # Python non-standard library imports
 import pandas as pd
 
 # Oasis utils and other Oasis imports
-#import importlib; import oasislmf
-#from oasislmf.utils.data import get_dataframe 
 from oasislmf.utils.log import oasis_log
-#from oasislmf.utils.metadata import OASIS_KEYS_STATUS
-from oasislmf.model_preparation.lookup import OasisBaseKeysLookup
-#from oasislmf.utils.data import get_ids
-# Model keys server imports
-#from oasislmf.utils import *
+from oasislmf.utils.status import OASIS_KEYS_STATUS
+from oasislmf.preparation.lookup import OasisBaseKeysLookup
+
 
 class DeterministicKeysLookup(OasisBaseKeysLookup):
 
@@ -47,7 +41,32 @@ class DeterministicKeysLookup(OasisBaseKeysLookup):
             output_directory
         )
 
+        # perils
+        with io.open(os.path.join(self.keys_data_directory,'perils.json'),'r',encoding='utf-8') as p:
+            self.perils = json.load(p)
 
+        # area perils
+        with io.open(os.path.join(self.keys_data_directory,'areaperils.json'),'r',encoding='utf-8') as ap:
+            self.areaperils = json.load(ap)
+
+    def get_perils(self,locperilscovered):
+        source_peril_list = locperilscovered.replace(' ','').split(';')
+        target_peril_list = []
+
+        if len(source_peril_list) > 0:
+            for sp in source_peril_list:
+                target_perils = self.perils[sp]
+                for tp in target_perils:
+                    target_peril_list.append(tp)
+        
+        #remove duplicates
+        return_perils = list(set(target_peril_list))
+
+        return return_perils
+
+    def get_areaperil(self,peril):
+        ap_id = self.areaperils[peril]
+        return ap_id
 
     @oasis_log()
     def process_locations(self, loc_df):
@@ -65,21 +84,30 @@ class DeterministicKeysLookup(OasisBaseKeysLookup):
         loc_df_cols = loc_df.columns
         for col_id in required_columns:
             if required_columns[col_id] not in loc_df_cols:
-                loc_df[required_columns[col_id]] = 100
+                loc_df[required_columns[col_id]] = 1.0
 
 
         for index, row in loc_df.iterrows():
-            for cov in range(1,5):
-                dr_col = required_columns[cov]
-                dr = row[[dr_col]]
-                locnumber = row['loc_id']
-                yield {
-                    "loc_id": int(locnumber),
-                    "peril_id": 'WTC',
-                    "coverage_type": int(cov),
-                    "area_peril_id": 1,
-                    "vulnerability_id": int(dr),
-                    "message": '',
-                    "status": 'success'
-                }
+            loc_id = row['loc_id']
+            locperilscovered = row['locperilscovered']
+            lst_perils = self.get_perils(locperilscovered)
+            status = OASIS_KEYS_STATUS['success']['id']
+
+
+            for peril in lst_perils:
+                ap_id = self.get_areaperil(peril)
+                for cov in range(1,5):
+                    dr_col = required_columns[cov]
+                    dr = float(row[dr_col])*100
+                    v_id = int(dr)
+
+                    yield {
+                        "loc_id": int(loc_id),
+                        "peril_id": peril,
+                        "coverage_type": int(cov),
+                        "area_peril_id": ap_id,
+                        "vulnerability_id": v_id,
+                        "message": '',
+                        "status": status
+                    }
 
