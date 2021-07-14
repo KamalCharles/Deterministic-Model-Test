@@ -5,5 +5,6 @@
     "model_data_dir": "model_data",
     "model_version_csv": "keys_data/ModelVersion.csv",
     "oed_accounts_csv": "tests/data/SourceFiles/SourceAccDeterministic.csv",
-    "oed_location_csv": "tests/data/SourceFiles/SourceLocDeterministic.csv"
+    "oed_location_csv": "tests/data/SourceFiles/SourceLocDeterministic.csv",
+    "ktools_alloc_rule_gul": 1
 }
